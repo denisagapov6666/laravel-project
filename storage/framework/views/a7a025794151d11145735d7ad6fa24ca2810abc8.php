@@ -1,0 +1,1 @@
+<button class="btn btn-xs btn-primary mb-1"  <?php if(isset($id)): ?> onclick="setid(<?php echo e($id); ?>)" <?php endif; ?>><i class="fas fa-calendar-alt"></i></button><?php /**PATH D:\04_01_24\resources\views/backend/datatable/action-extend-date.blade.php ENDPATH**/ ?>
