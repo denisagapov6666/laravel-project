@@ -4548,7 +4548,7 @@ ul.product-tab li.active:after {
 .contact-area-section,
 .contact_secound_section {
   background-color:blue;
-  padding: 105px 0px 105px;
+  padding: 50px 0px 50px;
 }
 
 .contact-area-section .section-title h2,
@@ -4569,6 +4569,11 @@ ul.product-tab li.active:after {
 
 .contact-left-content {
   max-width: 500px;
+}
+.link-website{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .address-icon {
