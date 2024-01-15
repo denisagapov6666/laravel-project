@@ -123,7 +123,7 @@
                                             <div class="panel position-relative">
                                                 {{-- @if(auth()->check())
                                                     @if(in_array($lesson->model->id,$completed_lessons)) --}}
-                                                        <div class="position-absolute" style="right: 0;top:3px">
+                                                        <div class="position-absolute" style="right: 0;top:3px;">
                                                         @php 
                                                         
                                                             // $percent = $lesson->course->progress();
@@ -132,13 +132,13 @@
                                                                 $percent = round($percent,2);
                                                             // }
                                                         @endphp
-                                                            <span class="gradient-bg p-1 text-white font-weight-bold completed" style="border-radius: 0 0 0 4px!important;">@if($percent == '100') @lang('labels.frontend.course.completed') @else {{$percent}}% @endif</span>
+                                                            <span class=" p-1 text-white font-weight-bold completed" style="border-radius: 0 0 0 4px!important;background-color:#18149b!important;">@if($percent == '100') @lang('labels.frontend.course.completed') @else {{$percent}}% @endif</span>
                                                         </div>
                                                     {{-- @endif
                                                 @endif --}}
                                                 <div class="panel-title" id="headingOne">
                                                     <div class="ac-head">
-                                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                                        <button class="btn btn-link collapsed"data-toggle="collapse"
                                                                 data-target="#collapse{{$count}}" aria-expanded="false"
                                                                 aria-controls="collapse{{$count}}">
                                                             <span>{{ sprintf("%02d", $count)}}</span>

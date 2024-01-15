@@ -124,7 +124,7 @@
 
                                             <div class="panel position-relative">
                                                 
-                                                        <div class="position-absolute" style="right: 0;top:3px">
+                                                        <div class="position-absolute" style="right: 0;top:3px;">
                                                         <?php 
                                                         
                                                             // $percent = $lesson->course->progress();
@@ -133,12 +133,12 @@
                                                                 $percent = round($percent,2);
                                                             // }
                                                         ?>
-                                                            <span class="gradient-bg p-1 text-white font-weight-bold completed" style="border-radius: 0 0 0 4px!important;"><?php if($percent == '100'): ?> <?php echo app('translator')->get('labels.frontend.course.completed'); ?> <?php else: ?> <?php echo e($percent); ?>% <?php endif; ?></span>
+                                                            <span class=" p-1 text-white font-weight-bold completed" style="border-radius: 0 0 0 4px!important;background-color:#18149b!important;"><?php if($percent == '100'): ?> <?php echo app('translator')->get('labels.frontend.course.completed'); ?> <?php else: ?> <?php echo e($percent); ?>% <?php endif; ?></span>
                                                         </div>
                                                     
                                                 <div class="panel-title" id="headingOne">
                                                     <div class="ac-head">
-                                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                                        <button class="btn btn-link collapsed"data-toggle="collapse"
                                                                 data-target="#collapse<?php echo e($count); ?>" aria-expanded="false"
                                                                 aria-controls="collapse<?php echo e($count); ?>">
                                                             <span><?php echo e(sprintf("%02d", $count)); ?></span>

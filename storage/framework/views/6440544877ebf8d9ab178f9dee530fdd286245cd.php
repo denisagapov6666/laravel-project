@@ -87,6 +87,7 @@
                     <h4><?php echo app('translator')->get('labels.general.no_data_available'); ?></h4>
                 <?php endif; ?> -->
             </div>
+            <div>a;ldkjf;a</div>
         </div>
     </div>
 </section>
