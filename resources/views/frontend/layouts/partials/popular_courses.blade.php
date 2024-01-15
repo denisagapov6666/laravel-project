@@ -2,8 +2,9 @@
 <!-- Start popular course
        ============================================= -->
 @if(count($popular_courses) > 0)
-    <section id="popular-course" style="margin-top: -4rem;" class="popular-course-section {{isset($class) ? $class : ''}}">
+    <section id="popular-course" style="margin-top:20px;" class="popular-course-section {{isset($class) ? $class : ''}}">
         <div class="container">
+     
             {{-- <div class="section-title mb20 headline text-left ">
                 <span class="subtitle text-uppercase">@lang('labels.frontend.layouts.partials.learn_new_skills')</span>
                 <h2>@lang('labels.frontend.layouts.partials.popular_courses')</h2>
@@ -47,13 +48,14 @@
                                 </div>
                             </div> --}}
                             <div class="course-title mt10 headline pb45 relative-position">
-                                <h3><a href="{{ route('courses.show', [$item->slug]) }}">{{$item->title}}</a>
+                                <h3><a href="{{ route('courses.show', [$item->slug]) }}">{{$item->title}}&nbsp;<i class = "fas fa-arrow-right"></i></a>
+                                
                                     @if($item->trending == 1)
                                         <span
                                                 class="trend-badge text-uppercase bold-font"><i
                                                     class="fas fa-bolt"></i> @lang('labels.frontend.badges.trending')</span>
-                                    @endif
-
+                                                    @endif
+                                                    
                                 </h3>
                             </div>
                             <div class="course-viewer ul-li">
@@ -65,13 +67,17 @@
                                     {{--<li><a href="">125k Unrolled</a></li>--}}
                                 </ul>
                             </div>
-                            @include('frontend.layouts.partials.wishlist',['course' => $item->id, 'price' => $item->price])
+                            <!-- @include('frontend.layouts.partials.wishlist',['course' => $item->id, 'price' => $item->price]) -->
                         </div>
                     </div>
                     <!-- /item -->
                 @endforeach
             </div>
         </div>
+        <!-- <div class="section-title mb20 headline text-center ">
+            <span class="subtitle text-uppercase">@lang('labels.frontend.home.learn_new_skills')</span>
+            <h2>@lang('labels.frontend.home.search_courses')</h2>
+        </div> -->
     </section>
     <!-- End popular course
         ============================================= -->

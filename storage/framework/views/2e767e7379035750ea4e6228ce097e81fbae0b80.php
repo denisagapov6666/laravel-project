@@ -2,8 +2,9 @@
 <!-- Start popular course
        ============================================= -->
 <?php if(count($popular_courses) > 0): ?>
-    <section id="popular-course" style="margin-top: -4rem;" class="popular-course-section <?php echo e(isset($class) ? $class : ''); ?>">
+    <section id="popular-course" style="margin-top:20px;" class="popular-course-section <?php echo e(isset($class) ? $class : ''); ?>">
         <div class="container">
+     
             
             <div id="course-slide-item" class="course-slide">
                 <?php $__currentLoopData = $popular_courses; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -32,13 +33,14 @@
                         <div class="course-item-text">
                             
                             <div class="course-title mt10 headline pb45 relative-position">
-                                <h3><a href="<?php echo e(route('courses.show', [$item->slug])); ?>"><?php echo e($item->title); ?></a>
+                                <h3><a href="<?php echo e(route('courses.show', [$item->slug])); ?>"><?php echo e($item->title); ?>&nbsp;<i class = "fas fa-arrow-right"></i></a>
+                                
                                     <?php if($item->trending == 1): ?>
                                         <span
                                                 class="trend-badge text-uppercase bold-font"><i
                                                     class="fas fa-bolt"></i> <?php echo app('translator')->get('labels.frontend.badges.trending'); ?></span>
-                                    <?php endif; ?>
-
+                                                    <?php endif; ?>
+                                                    
                                 </h3>
                             </div>
                             <div class="course-viewer ul-li">
@@ -51,13 +53,17 @@
                                     
                                 </ul>
                             </div>
-                            <?php echo $__env->make('frontend.layouts.partials.wishlist',['course' => $item->id, 'price' => $item->price], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+                            <!-- <?php echo $__env->make('frontend.layouts.partials.wishlist',['course' => $item->id, 'price' => $item->price], \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?> -->
                         </div>
                     </div>
                     <!-- /item -->
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </div>
         </div>
+        <!-- <div class="section-title mb20 headline text-center ">
+            <span class="subtitle text-uppercase"><?php echo app('translator')->get('labels.frontend.home.learn_new_skills'); ?></span>
+            <h2><?php echo app('translator')->get('labels.frontend.home.search_courses'); ?></h2>
+        </div> -->
     </section>
     <!-- End popular course
         ============================================= -->

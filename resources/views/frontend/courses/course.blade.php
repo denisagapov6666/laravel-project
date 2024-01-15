@@ -544,7 +544,7 @@
                             @endif
 
                         </div>
-                        <div class="enrolled-student">
+                        <!-- <div class="enrolled-student">
                             <div class="comment-ratting float-left ul-li">
                                 <ul>
                                     @for($i=1; $i<=(int)$course->rating; $i++)
@@ -577,7 +577,7 @@
                                 </li> --}}
                             </ul>
 
-                        </div>
+                        </div> -->
 
                         @if($recent_news->count() > 0)
                             <div class="side-bar-widget">

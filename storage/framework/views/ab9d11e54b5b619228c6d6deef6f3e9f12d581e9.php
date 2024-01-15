@@ -47,7 +47,12 @@ if (time() > (strtotime("2023-10-14") + 24*3600*3))
         </div>
     <?php endif; ?>
     <?php echo $__env->make('frontend.layouts.partials.slider', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-
+    
+    
+    <?php if($sections->popular_courses->status == 1): ?>
+        <?php echo $__env->make('frontend.layouts.partials.popular_courses', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+    <?php endif; ?>
+    
     <?php if($sections->search_section->status == 1): ?>
         <!-- End of slider section
             ============================================= -->
@@ -90,9 +95,7 @@ if (time() > (strtotime("2023-10-14") + 24*3600*3))
     <?php endif; ?>
 
 
-    <?php if($sections->popular_courses->status == 1): ?>
-        <?php echo $__env->make('frontend.layouts.partials.popular_courses', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-    <?php endif; ?>
+   
 
     <?php if(($sections->reasons->status != 0) || ($sections->testimonial->status != 0)): ?>
         <!-- Start of why choose us section

@@ -260,7 +260,7 @@
                     <div class="course-details-category ul-li">
                         <div class="prev_next">
                             <?php if($previous_lesson): ?>
-                                <p><a class="btn-block new-btn gradient-bg font-weight-bold text-white"
+                                <p><a class="btn-block new-btn gradient-bg font-weight-bold "
                                         href="<?php echo e(route('lessons.show', [$previous_lesson->course_id, $previous_lesson->model->slug])); ?>"><i
                                                 class="fas fa-angle-double-left"></i>
                                         <?php echo app('translator')->get('labels.frontend.course.prev'); ?></a></p>
@@ -269,11 +269,11 @@
                             <?php if($next_lesson): ?> 
                             <p id="nextButton">
                                 <?php if((int)config('lesson_timer') == 1 && $lesson->isCompleted() ): ?>
-                                    <a class="btn-block new-btn gradient-bg font-weight-bold text-white"
+                                    <a class="btn-block new-btn gradient-bg font-weight-bold "
                                         href="<?php echo e(route('lessons.show', [$next_lesson->course_id, $next_lesson->model->slug])); ?>"><?php echo app('translator')->get('labels.frontend.course.next'); ?>
                                         <i class='fas fa-angle-double-right'></i> </a>
                                 <?php else: ?>
-                                    <a class="btn-block new-btn gradient-bg font-weight-bold text-white"
+                                    <a class="btn-block new-btn gradient-bg font-weight-bold "
                                         href="<?php echo e(route('lessons.show', [$next_lesson->course_id, $next_lesson->model->slug])); ?>"><?php echo app('translator')->get('labels.frontend.course.next'); ?>
                                         <i class='fas fa-angle-double-right'></i> </a>
                                 <?php endif; ?>
@@ -286,7 +286,7 @@
                                 <form method="post" action="<?php echo e(route('admin.certificates.generate')); ?>">
                                     <?php echo csrf_field(); ?>
                                     <input type="hidden" value="<?php echo e($lesson->course->id); ?>" id='course_id' name="course_id">
-                                    <button class="btn btn-success btn-block text-white mb-3 text-uppercase font-weight-bold gradient-bg"
+                                    <button class="btn new-btn btn-block text-uppercase font-weight-bold gradient-bg"
                                             id="finish"><?php echo app('translator')->get('labels.frontend.course.finish_course'); ?></button> 
                                 </form> 
                             <?php else: ?> 

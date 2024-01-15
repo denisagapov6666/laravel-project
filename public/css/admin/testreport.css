@@ -35,3 +35,6 @@
 #d3bar-chartdiv{
     left:200px;
 }
+.cke_button__chart {
+    background-color: blue !important; /* Change to your desired color */
+}

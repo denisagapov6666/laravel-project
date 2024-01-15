@@ -56,6 +56,7 @@ $operators=["equals","not equals","contains","not contains","greater","less","gr
                             </option>                             
                         @endforeach  
                     </select>
+                    
 
                     <div id="tests_id1"></div>
                      <p class="help-block"></p>
@@ -707,6 +708,10 @@ $operators=["equals","not equals","contains","not contains","greater","less","gr
         });
 
         jQuery(document).ready(function(e) {       
+            $('#tests_id').select2({
+                minimumInputLength: 0, // Set minimum input length to 0 to display all options by default
+                // Additional options and configurations can be added here
+            });
             TableEditable.init();
             QuestionCreate.init();  
             //UIToastr.init();
@@ -722,7 +727,13 @@ $operators=["equals","not equals","contains","not contains","greater","less","gr
             //         $('#color').val(color1);
             //     }
             // })
+            $('#tests_id').select2({
+            minimumInputLength: infinity, // Set minimum input length to 0 to display all options by default
+            // Additional options and configurations can be added here
+        });
+            
             $("#tests_id").on("change",function(e) {
+                console.log("lk")
                 var route = '/user/questions';
                 var getReportRoute = '';
                 @php

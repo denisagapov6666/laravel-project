@@ -1670,9 +1670,7 @@ button.alt-menu-btn.float-left {
 
 /*----------------------------------------------------*/
 
-.search-course-section {
-  padding: 125px 0px 100px 0px;
-}
+
 
 .search-course input,
 .search-course .register-form-area select,
@@ -1954,9 +1952,6 @@ button.alt-menu-btn.float-left {
 
 /*----------------------------------------------------*/
 
-.popular-course-section {
-  padding-bottom: 125px;
-}
 
 .popular-course-section .section-title .subtitle {
   margin-left: 42px;
@@ -2020,6 +2015,9 @@ button.alt-menu-btn.float-left {
   -webkit-transition: .3s all ease-in-out;
   transition: .3s all ease-in-out;
 }
+.course-title h3 a{
+  color:blue!important;
+}
 
 .course-title h3 span {
   top: -5px;
@@ -2039,6 +2037,9 @@ button.alt-menu-btn.float-left {
   padding: 5px 15px;
   border-radius: 3px;
   background-color: #f7f7f7;
+}
+.course-viewer li a{
+  color:blue!important;
 }
 
 .course-price {
@@ -4546,7 +4547,7 @@ ul.product-tab li.active:after {
 
 .contact-area-section,
 .contact_secound_section {
-  background-image: url(/images/contact-b.jpg?7074d794ff7f22c91999d1527d34bbf5);
+  background-color:blue;
   padding: 105px 0px 105px;
 }
 

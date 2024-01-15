@@ -66,6 +66,7 @@ margin-right: 5px !important;
 margin-left: 5px !important;
 }
 
+
 .options-list li.correct:before {
   content: "\f058"; /* FontAwesome Unicode */
   font-family: 'Font Awesome\ 5 Free';
@@ -1813,16 +1814,17 @@ span.coin {
   border: 2px solid transparent;
   border-radius: 3px !important;
   border-bottom: 1px solid var(--bg1);
-  background: var(--bg1) !important;
+  background-color:white!important;
   transition: none;
 }
-
+a:hover{
+  text-decoration:none;
+}
 .course-timeline-list > li a,
 .course-timeline-list > li p,
 .new-btn {
-  color: var(--color2) !important;
   font-family: var(--family2);
-  font-size: var(--size2);
+  font-size: var(--size2)!important;
   transition: none;
 }
 
@@ -1831,17 +1833,18 @@ span.coin {
 .course-timeline-list > .active a,
 .course-timeline-list > .active p,
 .new-btn:hover {
-  color: var(--color1) !important;
-  font-family: var(--family1);
-  font-size: var(--size1);
+  color: black!important;
+  font-family: var(--family1)!important;
 }
 
 .new-btn {
-  background: var(--bg2) !important;
+  background-color:white!important;
+  color: black!important;
 }
 
 .new-btn:hover {
-  background: var(--bg1) !important;
+  background-color:grey!important;
+  text-decoration: none;
 }
 
 .helpDiv {

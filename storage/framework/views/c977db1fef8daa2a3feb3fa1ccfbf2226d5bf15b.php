@@ -395,7 +395,7 @@
                             <?php endif; ?>
 
                         </div>
-                        <div class="enrolled-student">
+                        <!-- <div class="enrolled-student">
                             <div class="comment-ratting float-left ul-li">
                                 <ul>
                                     <?php for($i=1; $i<=(int)$course->rating; $i++): ?>
@@ -415,7 +415,7 @@
                                 
                             </ul>
 
-                        </div>
+                        </div> -->
 
                         <?php if($recent_news->count() > 0): ?>
                             <div class="side-bar-widget">

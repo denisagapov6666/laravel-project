@@ -49,7 +49,12 @@ if (time() > (strtotime("2023-10-14") + 24*3600*3))
         </div>
     @endif
     @include('frontend.layouts.partials.slider')
-
+    
+    
+    @if($sections->popular_courses->status == 1)
+        @include('frontend.layouts.partials.popular_courses')
+    @endif
+    
     @if($sections->search_section->status == 1)
         <!-- End of slider section
             ============================================= -->
@@ -134,9 +139,7 @@ if (time() > (strtotime("2023-10-14") + 24*3600*3))
     @endif
 
 
-    @if($sections->popular_courses->status == 1)
-        @include('frontend.layouts.partials.popular_courses')
-    @endif
+   
 
     @if(($sections->reasons->status != 0) || ($sections->testimonial->status != 0))
         <!-- Start of why choose us section

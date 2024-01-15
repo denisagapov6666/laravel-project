@@ -6,14 +6,14 @@
                     @php
                         $contact_data = contact_data(config('contact_data'));
                     @endphp
-                    <div class="col-md-6">
+                    <div class="col-md-9">
                         <div class="contact-left-content ">
-                            <div class="section-title  mb45 headline text-left">
-                                <span class="subtitle ml42  text-uppercase">@lang('labels.frontend.layouts.partials.contact_us')</span>
-                                <h2><span>@lang('labels.frontend.layouts.partials.get_in_touch')</span></h2>
-                                <p>
+                            <div class="section-title mb45 headline text-left">
+                                <h3 class = "text-uppercase"><span>@lang('labels.frontend.layouts.partials.contact_us')</span></h3>
+                                <span class="subtitle ml42">@lang('labels.frontend.layouts.partials.get_in_touch')</span>
+                                <!-- <p>
                                     {{ $contact_data["short_text"]["value"] }}
-                                </p>
+                                </p> -->
                             </div>
 
                             <div class="contact-address">
@@ -89,20 +89,21 @@
                                 @endif
                             </div>
                         </div>
-                        <div class="genius-btn mt60 gradient-bg text-center text-uppercase ul-li-block bold-font ">
+                        <!-- <div class="genius-btn mt60 gradient-bg text-center text-uppercase ul-li-block bold-font ">
                             <a href="{{route('contact')}}">@lang('labels.frontend.layouts.partials.contact_us') <i class="fas fa-caret-right"></i></a>
-                        </div>
+                        </div> -->
                     </div>
-                    @if($contact_data["location_on_map"]["status"] == 1)
-                        <div class="col-md-6">
-                            <div id="contact-map" class="contact-map-section">
+                    <!-- @if($contact_data["location_on_map"]["status"] == 1) -->
+                        <div class="col-md-3">
+                            <!-- <div id="contact-map" class="contact-map-section">
                                 {!! $contact_data["location_on_map"]["value"] !!}
-                            </div>
+                            </div> -->
+                            ;lkajdf;lakjfd;alks
                         </div>
-                    @endif
-                @else
+                    <!-- @endif -->
+                <!-- @else
                     <h4>@lang('labels.general.no_data_available')</h4>
-                @endif
+                @endif -->
             </div>
         </div>
     </div>
